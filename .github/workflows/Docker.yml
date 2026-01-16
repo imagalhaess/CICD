@@ -1,6 +1,9 @@
 name: Docker
 on:
-  workflow_call: 
+  push:              # Roda em todo push
+  pull_request:      # Roda em PRs
+  workflow_dispatch: # Roda manualmente
+  workflow_call:     # Pode ser chamado por outros workflows 
 jobs:
   docker:
     runs-on: ubuntu-latest
